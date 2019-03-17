@@ -13,7 +13,6 @@
   "main": "gatsby-node.js",
   "scripts": {
     "compile": "rimraf lib && babel src -d lib && copyfiles package.json README.md lib",
-    "publish": "yarn compile && cd ./lib && npm publish --access=public",
     "lint": "eslint src"
   },
   "repository": {
