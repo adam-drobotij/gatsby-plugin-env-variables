@@ -1,6 +1,6 @@
 {
   "name": "@robotd/gatsby-plugin-env-variables",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Gatsby plugin to whitelist system environment variables to be made available to client-side scripts",
   "keywords": [
     "gatsby",
