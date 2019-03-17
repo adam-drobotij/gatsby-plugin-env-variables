@@ -1,10 +1,12 @@
+import dotenv from "dotenv";
+
 exports.onCreateWebpackConfig = ({ actions, plugins }, options) => {
 	const { whitelist, path } = options || {};
 
 	if (!whitelist) return;
 
 	if (path) {
-		require("dotenv").config({
+		dotenv.config({
 			path
 		});
 	}

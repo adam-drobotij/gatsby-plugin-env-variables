@@ -1,6 +1,6 @@
 {
   "name": "@robotd/gatsby-plugin-env-variables",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Gatsby plugin to whitelist system environment variables to be made available to client-side scripts",
   "keywords": [
     "gatsby",
@@ -8,11 +8,12 @@
     "environment variables",
     "env variables"
   ],
-  "author": "Chad Lee <npm@chadly.net>, Adam Drobotij <@drobotij>",
+  "author": "Chad Lee <npm@chadly.net>, Adam Drobotij <npm@robot-d.com>",
   "license": "MIT",
   "main": "gatsby-node.js",
   "scripts": {
     "compile": "rimraf lib && babel src -d lib && copyfiles package.json README.md lib",
+    "publish": "yarn compile && cd ./lib && npm publish --access=public",
     "lint": "eslint src"
   },
   "repository": {
