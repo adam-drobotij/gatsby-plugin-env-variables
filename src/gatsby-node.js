@@ -1,7 +1,13 @@
 exports.onCreateWebpackConfig = ({ actions, plugins }, options) => {
-	const { whitelist } = options || {};
+	const { whitelist, path } = options || {};
 
 	if (!whitelist) return;
+
+	if (path) {
+		require("dotenv").config({
+			path
+		});
+	}
 
 	const varobj = Object.keys(process.env).reduce((acc, key) => {
 		if (whitelist.indexOf(key) >= 0) {
